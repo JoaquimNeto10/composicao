@@ -10,9 +10,9 @@ public class Trabalhador {
 	
 	private String nome;
 	private NivelTrabalhador nivel;
-	private Double salarioBase;
-	
+	private Double salarioBase;	
 	private Departamento departamento;
+	//Quando se tem uma composição tem muitos(no caso abaixo uma lista) não é incluído no construtor do método, simplesmente inicia a lista vazia
 	private List<Contrato> contratos = new ArrayList<>();
 	
 	
@@ -39,17 +39,17 @@ public class Trabalhador {
 		double soma = salarioBase;
 		Calendar cal = Calendar.getInstance();
 		for (Contrato c : contratos) {
+			//para cada contrato c, eu vou setar nesse calendario a data do contrato c 
 			cal.setTime(c.getData());
-			int c_ano = cal.get(Calendar.YEAR);
+			int c_ano = cal.get(Calendar.YEAR); 
 			int c_mes = 1 + cal.get(Calendar.MONTH);
 			
-			if (c_ano == ano && c_mes == mes) {
-				soma += c.valorTotal();
+			if (ano == c_ano && mes == c_mes) {
+				soma += c.valorTotal();	
 			}
 		}
 		return soma;
 	}
-
 
 	public String getNome() {
 		return nome;
