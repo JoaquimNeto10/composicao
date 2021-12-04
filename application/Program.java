@@ -18,7 +18,7 @@ public class Program {
 		Scanner sc = new Scanner (System.in);
 		Locale.setDefault(Locale.US);
 		//Criado para manipularmos uma data
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
 		
 		System.out.print("Entre com o nome do departamento: ");
@@ -56,7 +56,7 @@ public class Program {
 		}
 		
 		System.out.println();
-		System.out.println("Entre com o mês e ano para calcular o salário (MM/YYYY): ");
+		System.out.print("Entre com o mês e ano para calcular o salário (MM/YYYY): ");
 		String mesAno = sc.next();
 		//pegou a variavel mesAno e converteu para um inteiro e armazenou nas variaveis mes e ano
 		// o mesAno.substring(0, 2) é para cortar a string mesAno e pegar apenas os caracteres 0 a 2. Ex: 08/2021 = pegará o 08. Obs: tem que colocar um numero a mais, no caso não seria mesAno.substring(0, 1)
