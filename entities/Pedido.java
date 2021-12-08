@@ -65,10 +65,6 @@ public class Pedido {
 	public void setCliente(Clientes cliente) {
 		this.cliente = cliente;
 	}
-
-	public List<ItemPedido> getItens() {
-		return itens;
-	}
 	
 	@Override
 	public String toString() {
